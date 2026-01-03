@@ -1,0 +1,148 @@
+.twitter-container {
+  margin-top: 20px;
+}
+
+.twitter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.twitter-section-title {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+}
+
+.twitter-link-btn {
+  background-color: #1da1f2;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.twitter-link-btn:hover {
+  background-color: #1a91da;
+}
+
+.tweets-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tweet-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.tweet-link:hover {
+  transform: translateX(2px);
+}
+
+.tweet {
+  background-color: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 16px;
+  transition: opacity 0.5s ease, border-color 0.2s;
+  cursor: pointer;
+}
+
+.tweet-link:hover .tweet {
+  border-color: #1da1f2;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.tweet-user {
+  color: #58a6ff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tweet-time {
+  color: #6e7681;
+  font-size: 12px;
+}
+
+.tweet-content {
+  color: #c9d1d9;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .twitter-container {
+    margin-top: 16px;
+    padding: 0 4px;
+  }
+
+  .twitter-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .twitter-section-title {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .twitter-link-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .tweets-wrapper {
+    gap: 12px;
+  }
+
+  .tweet {
+    padding: 14px;
+    border-radius: 6px;
+  }
+
+  .tweet-header {
+    margin-bottom: 6px;
+  }
+
+  .tweet-user {
+    font-size: 13px;
+  }
+
+  .tweet-time {
+    font-size: 11px;
+  }
+
+  .tweet-content {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* Adjust for very small screens */
+  @media (max-width: 360px) {
+    .tweet {
+      padding: 12px;
+    }
+
+    .tweet-content {
+      font-size: 12.5px;
+    }
+  }
+}

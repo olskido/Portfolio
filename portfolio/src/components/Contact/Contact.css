@@ -1,0 +1,106 @@
+.contact {
+  margin-bottom: 60px;
+}
+
+.contact-heading {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: #58a6ff;
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-error {
+  color: #f85149;
+  font-size: 14px;
+  margin-top: 8px;
+  display: block;
+}
+
+.submit-btn {
+  background-color: #238636;
+  color: #ffffff;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #2ea043;
+}
+
+.submit-btn:active {
+  background-color: #238636;
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+}
+
+.social-link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #79c0ff;
+}
+
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 28px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+
+  .social-link {
+    font-size: 14px;
+  }
+}

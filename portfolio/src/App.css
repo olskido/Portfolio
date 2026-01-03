@@ -1,0 +1,107 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  align-items: flex-start;
+}
+
+.left-panel {
+  flex: 0 0 68%;
+  min-height: 100vh;
+  padding: 0;
+  background-color: #0d1117;
+}
+
+.left-panel-content {
+  max-width: 950px;
+  padding: 80px 60px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.right-panel {
+  flex: 0 0 32%;
+  min-height: 100vh;
+  background-color: #161b22;
+  padding: 40px 30px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-left: 1px solid rgba(33, 38, 45, 0.6);
+  box-sizing: border-box;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .left-panel-content {
+    max-width: 100%;
+    padding: 60px 40px;
+  }
+
+  .right-panel {
+    flex: 1 1 auto;
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid rgba(33, 38, 45, 0.6);
+  }
+}
+
+@media (max-width: 768px) {
+  .left-panel-content {
+    padding: 40px 20px;
+  }
+
+  .right-panel {
+    padding: 25px 15px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  button, a, [role="button"], [tabindex] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Accessibility focus states */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+  .right-panel,
+  .mobile-activity-drawer,
+  .mobile-navbar {
+    display: none !important;
+  }
+  
+  .left-panel {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .left-panel-content {
+    padding: 20px !important;
+  }
+}
