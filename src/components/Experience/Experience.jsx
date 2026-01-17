@@ -41,7 +41,7 @@ const Experience = () => {
     {
       title: 'Full-Stack Developer (Personal Project)',
       company: 'CoinView',
-      period: '2024 - 2025',
+      period: '2025',
       desc: 'Developed a cryptocurrency portfolio management app that integrates market data into an interactive dashboard.',
       impact: [
         'Implemented interactive price charts and multi-asset watchlists.',

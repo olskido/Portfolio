@@ -3,11 +3,10 @@ import { Linkedin, Github, Send } from 'lucide-react';
 import './Footer.css';
 
 // Twitter/X SVG Icon Component
-const XIcon = ({ size = 18 }) => (
+const XIcon = ({ className }) => (
   <svg
     viewBox="0 0 24 24"
-    width={size}
-    height={size}
+    className={className}
     fill="currentColor"
     aria-hidden="true"
   >
@@ -23,12 +22,12 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/olskido',
-      icon: <Linkedin size={20} />
+      icon: <Linkedin />
     },
     {
       name: 'GitHub',
       url: 'https://github.com/olskido',
-      icon: <Github size={20} />
+      icon: <Github />
     },
     {
       name: 'X',
@@ -38,7 +37,7 @@ const Footer = () => {
     {
       name: 'Telegram',
       url: 'https://t.me/olskido',
-      icon: <Send size={20} />
+      icon: <Send />
     }
   ];
 
@@ -48,7 +47,16 @@ const Footer = () => {
         {/* Contact Form Section */}
         <div className="footer-contact-wrapper">
           <h2 className="contact-heading">Get in touch</h2>
-          <form className="contact-form" action="mailto:Olskidox@gmail.com" method="post" encType="text/plain">
+          <form
+            className="contact-form"
+            action="https://formsubmit.co/olskidox@gmail.com"
+            method="POST"
+          >
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_subject" value="New Portfolio Contact" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_autoresponse" value="Thank you for your message! I will get back to you shortly." />
+
             <div className="form-group">
               <input type="text" name="name" placeholder="Name" className="form-input" required />
             </div>
@@ -73,8 +81,8 @@ const Footer = () => {
                 className="footer-social-link"
                 aria-label={link.name}
               >
-                {/* Clone element with size 18 prop */}
-                {React.cloneElement(link.icon, { size: 18 })}
+                {/* Clone element with className for responsive sizing */}
+                {React.cloneElement(link.icon, { className: 'footer-social-icon' })}
               </a>
             ))}
           </div>
@@ -84,7 +92,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content" style={{ justifyContent: 'center' }}>
           <p className="footer-copyright">
-            © {creationYear}{currentYear !== creationYear ? `-${currentYear}` : ''} OLSKIDO. All rights reserved.
+            © {currentYear !== creationYear ? `-${currentYear}` : ''} OLSKIDO. All rights reserved.
           </p>
         </div>
       </div>

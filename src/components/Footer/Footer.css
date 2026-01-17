@@ -1,5 +1,5 @@
 .footer-section {
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 40px 60px;
   border-top: 1px solid #30363d;
   width: 100%;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
+  gap: 20px;
   margin-bottom: 40px;
 }
 
@@ -54,6 +54,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 .footer-links {
@@ -96,6 +97,20 @@
   color: #39d353;
 }
 
+/* Responsive Icon Sizing */
+.footer-social-icon {
+  width: 25px;
+  height: 25px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .footer-social-icon {
+    width: 27px;
+    height: 27px;
+  }
+}
+
 .footer-bottom {
   border-top: 1px solid #21262d;
   padding-top: 24px;
@@ -117,7 +132,7 @@
 
 .footer-bottom-links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 
 .footer-bottom-link {
@@ -291,5 +306,23 @@
 
   .footer-link-group {
     min-width: auto;
+  }
+}
+
+/* Social Links Spacing */
+.social-links-container {
+  display: flex;
+  gap: 24px;
+  transition: gap 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .social-links-container {
+    gap: 60px;
+  }
+
+  .footer-social-icon {
+    width: 35px;
+    height: 35px;
   }
 }
