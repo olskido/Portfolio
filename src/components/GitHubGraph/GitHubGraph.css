@@ -1,0 +1,164 @@
+.github-container {
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.github-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.github-section-title {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.github-graph-scroll-container {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.github-graph-outer {
+  min-width: 550px;
+  /* Ensures graph doesn't squish */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Month Row Styles */
+.github-month-row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.day-label-gutter {
+  width: 35px;
+  /* Matches the width of Mon/Wed/Fri labels */
+}
+
+.months-container {
+  display: grid;
+  grid-template-columns: repeat(53, 14px);
+  /* Match cell width */
+  gap: 3px;
+}
+
+.month-label {
+  font-size: 11px;
+  color: #8b949e;
+  grid-row: 1;
+}
+
+/* Main Graph Area */
+.github-graph-main {
+  display: flex;
+  gap: 8px;
+}
+
+.github-day-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 116px;
+  /* (14px + 3px gap) * 7 - 3px gap */
+  width: 30px;
+  padding-top: 2px;
+}
+
+.github-day-labels span {
+  font-size: 11px;
+  color: #8b949e;
+  height: 14px;
+  line-height: 14px;
+}
+
+.github-graph-grid {
+  display: flex;
+  gap: 3px;
+}
+
+.github-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.github-day {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.github-day:hover {
+  outline: 2px solid #ffffff;
+  z-index: 10;
+}
+
+/* Year Selectors */
+.github-year-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.year-btn {
+  background: #21262d;
+  color: #8b949e;
+  border: 1px solid #30363d;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.year-btn.active {
+  background: #238636;
+  color: #fff;
+  border-color: #238636;
+}
+
+.year-toggle-btn {
+  background: #21262d;
+  color: #8b949e;
+  border: 1px solid #30363d;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.year-toggle-btn:hover {
+  background: #30363d;
+}
+
+/* Loading and Error States */
+.github-loading,
+.github-error {
+  padding: 20px;
+  text-align: center;
+  color: #8b949e;
+  font-size: 14px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-error {
+  color: #f85149;
+}
+
+.github-link-btn {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.github-link-btn:hover {
+  color: #79c0ff;
+}

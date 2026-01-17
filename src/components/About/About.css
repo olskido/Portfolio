@@ -1,0 +1,50 @@
+.about-section {
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.about-header {
+  margin-bottom: 24px;
+}
+
+.about-name {
+  font-size: 64px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.about-title {
+  font-size: 24px;
+  color: #39d353;
+  /* GitHub Green */
+  margin-top: 12px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.about-container {
+  border-top: 1px solid #30363d;
+  padding-top: 24px;
+  max-width: 100%;
+  /* controls readability */
+  line-height: 1.7;
+}
+
+.about-statement {
+  font-size: 16px;
+  color: #8b949e;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .about-name {
+    font-size: 48px;
+  }
+
+  .about-container {
+    max-width: 100%;
+  }
+}

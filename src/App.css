@@ -1,0 +1,157 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: stretch;
+}
+
+.left-panel {
+  flex: 0 0 70%;
+  min-height: 100vh;
+  padding: 0;
+  background-color: #0d1117;
+}
+
+.left-panel-content {
+  max-width: 1400px;
+  padding: 80px 60px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Unify scrollbar: Right panel scrolls with main page */
+.right-panel {
+  flex: 0 0 30%;
+  background-color: #161b22;
+  padding: 40px 30px;
+  border-left: 1px solid rgba(33, 38, 45, 0.6);
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Prevent horizontal overflow */
+  /* Removing independent scroll properties */
+}
+
+/* On Desktop, these items are just normal blocks */
+.right-panel-item {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .left-panel-content {
+    max-width: 100%;
+    padding: 60px 40px;
+  }
+
+  .right-panel {
+    flex: 1 1 auto;
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid rgba(33, 38, 45, 0.6);
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Navigation and View Switching Logic */
+
+  .app {
+    padding-top: 60px;
+    /* Space for fixed navbar */
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  /* When view is 'github' or 'notes', this class is applied */
+  .mobile-only-view {
+    display: block !important;
+    min-height: calc(100vh - 60px);
+  }
+
+  .left-panel-content {
+    padding: 20px 20px 40px;
+  }
+
+  /* Main View: Left Panel is visible (default), Right Panel items are hidden by App.jsx state logic */
+
+  /* Right Panel adjustments for mobile */
+  .right-panel {
+    padding: 0;
+    background-color: #0d1117;
+    border: none;
+  }
+
+  /* If we are in main view, right panel items are hidden via .mobile-hidden class in JSX.
+     We also want to ensure the container doesn't take up space if empty. */
+  .right-panel:empty {
+    display: none;
+  }
+
+  .right-panel-item {
+    padding: 20px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+  button,
+  a,
+  [role="button"],
+  [tabindex] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Accessibility focus states */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+
+  .right-panel,
+  .mobile-activity-drawer,
+  .mobile-navbar {
+    display: none !important;
+  }
+
+  .left-panel {
+    width: 100%;
+    padding: 0;
+  }
+
+  .left-panel-content {
+    padding: 20px !important;
+  }
+}

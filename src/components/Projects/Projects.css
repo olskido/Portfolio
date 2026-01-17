@@ -1,0 +1,139 @@
+.projects {
+  margin-bottom: 100px;
+  position: relative;
+  padding: 0 20px;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.projects-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent-color);
+}
+
+/* Marquee Container */
+.projects-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Mask fade effect on edges for smooth entry/exit looks */
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.projects-track-marquee {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  /* Slow continuous scroll to left */
+  animation: scroll 40s linear infinite;
+  padding-left: 20px;
+  /* Initial offset */
+}
+
+.projects-track-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* Move half way since we duplicated the list */
+  }
+}
+
+.project-card {
+  min-width: 250px;
+  width: 250px;
+  background-color: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-color: #30363d;
+}
+
+.project-preview {
+  height: 140px;
+  width: 100%;
+  background-color: #26a641;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 16px 16px 8px;
+  color: #c9d1d9;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #8b949e;
+  margin: 0 16px 16px;
+  line-height: 1.5;
+}
+
+.view-more-btn {
+  color: #39d353;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.view-more-btn:hover {
+  text-decoration: underline;
+}
+
+.project-meta {
+  padding: 0 16px 16px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  font-size: 11px;
+  color: #58a6ff;
+  background-color: rgba(56, 139, 253, 0.1);
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 139, 253, 0.2);
+}
+
+.project-link {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background-color: #21262d;
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  border-top: 1px solid #30363d;
+}
+
+.project-link:hover {
+  background-color: #30363d;
+  color: #58a6ff;
+}

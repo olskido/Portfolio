@@ -1,0 +1,295 @@
+.footer-section {
+  margin-top: 60px;
+  padding: 40px 60px;
+  border-top: 1px solid #30363d;
+  width: 100%;
+  background-color: #0d1117;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-left {
+  flex: 1;
+  max-width: 400px;
+}
+
+.footer-brand {
+  margin-bottom: 20px;
+}
+
+.footer-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.footer-tagline {
+  font-size: 16px;
+  color: #39d353;
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer-description {
+  margin-top: 16px;
+}
+
+.footer-description p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #8b949e;
+  margin: 0;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-link-group {
+  min-width: 120px;
+}
+
+.footer-link-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-list li {
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: #8b949e;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #39d353;
+}
+
+.footer-bottom {
+  border-top: 1px solid #21262d;
+  padding-top: 24px;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: #8b949e;
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom-link {
+  color: #8b949e;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-link:hover {
+  color: #39d353;
+}
+
+/* Contact Form Styles */
+.footer-contact-wrapper {
+  margin-bottom: 60px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-heading {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: #39d353;
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-error {
+  color: #f85149;
+  font-size: 14px;
+  margin-top: 8px;
+  display: block;
+}
+
+.submit-btn {
+  background-color: #238636;
+  color: #ffffff;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #2ea043;
+}
+
+.submit-btn:active {
+  background-color: #238636;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .footer-contact-wrapper {
+    max-width: 100%;
+  }
+
+  .footer-section {
+    padding: 30px 40px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-left {
+    max-width: 100%;
+  }
+
+  .footer-right {
+    justify-content: flex-start;
+  }
+
+  .footer-links {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    margin-top: 40px;
+    padding: 30px 20px;
+  }
+
+  .contact-heading {
+    font-size: 28px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+
+  .footer-container {
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer-name {
+    font-size: 20px;
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    margin-top: 30px;
+    padding: 20px 15px;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-link-group {
+    min-width: auto;
+  }
+}
