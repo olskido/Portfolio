@@ -14,39 +14,35 @@
   border-left: 4px solid var(--accent-color);
 }
 
-/* Marquee Container */
+/* Marquee Container with manual scroll support */
 .projects-marquee-container {
   width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
   /* Mask fade effect on edges for smooth entry/exit looks */
-  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.projects-marquee-container::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-marquee-container:active {
+  cursor: grabbing;
 }
 
 .projects-track-marquee {
   display: flex;
   gap: 20px;
   width: max-content;
-  /* Slow continuous scroll to left */
-  animation: scroll 40s linear infinite;
-  padding-left: 20px;
-  /* Initial offset */
-}
-
-.projects-track-marquee:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-    /* Move half way since we duplicated the list */
-  }
+  padding: 20px 0;
+  will-change: transform;
 }
 
 .project-card {

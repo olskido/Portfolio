@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import "./Projects.css";
 import xandeumPreview from '../../assets/xandeumpreview.png';
 import coinviewPreview from '../../assets/coinviewpreview.png';
@@ -93,6 +93,11 @@ const ProjectCard = ({ project }) => {
 };
 
 const Projects = () => {
+  const containerRef = useRef(null);
+  const scrollRef = useRef(0);
+  const isDragging = useRef(false);
+  const animationRef = useRef(null);
+
   const projects = [
 
     {
@@ -133,13 +138,65 @@ const Projects = () => {
     }
   ];
 
-  const marqueeProjects = [...projects, ...projects];
+  // Triplicate projects for seamless loop + enough width to drag
+  const marqueeProjects = [...projects, ...projects, ...projects];
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Start in the middle set for smoother infinite feeling
+    const startScroll = container.scrollWidth / 3;
+    container.scrollLeft = startScroll;
+    scrollRef.current = startScroll;
+
+    const animate = () => {
+      if (!isDragging.current) {
+        scrollRef.current += 0.5; // Auto-scroll speed
+
+        // Loop logic
+        const oneThird = container.scrollWidth / 3;
+        if (scrollRef.current >= oneThird * 2) {
+          scrollRef.current = oneThird;
+        } else if (scrollRef.current <= 0) {
+          scrollRef.current = oneThird;
+        }
+
+        container.scrollLeft = scrollRef.current;
+      }
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationRef.current);
+  }, []);
+
+  const handleMouseDown = () => { isDragging.current = true; if (containerRef.current) containerRef.current.style.scrollBehavior = 'auto'; };
+  const handleMouseUp = () => {
+    isDragging.current = false;
+    if (containerRef.current) scrollRef.current = containerRef.current.scrollLeft;
+  };
+  const handleScroll = () => {
+    if (isDragging.current && containerRef.current) {
+      scrollRef.current = containerRef.current.scrollLeft;
+    }
+  };
 
   return (
     <section className="projects" id="projects">
       <h2 className="projects-heading">Featured Work</h2>
 
-      <div className="projects-marquee-container">
+      <div
+        className="projects-marquee-container"
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onTouchStart={handleMouseDown}
+        onTouchEnd={handleMouseUp}
+        onScroll={handleScroll}
+      >
         <div className="projects-track-marquee">
           {marqueeProjects.map((project, index) => (
             <ProjectCard key={`${project.id}-${index}`} project={project} />
@@ -148,7 +205,7 @@ const Projects = () => {
       </div>
 
       <div className="mobile-scroll-indicator" style={{ textAlign: 'center', marginTop: '10px', fontSize: '12px', color: '#8b949e' }}>
-        &lt;&lt; Scrolling &lt;&lt;
+        ← Swipable Marquee →
       </div>
     </section>
   );
