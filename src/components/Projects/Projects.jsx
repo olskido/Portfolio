@@ -4,6 +4,7 @@ import xandeumPreview from '../../assets/xandeumpreview.png';
 import coinviewPreview from '../../assets/coinviewpreview.png';
 import portfolioPreview from '../../assets/portfolio.png';
 import solardeskPreview from '../../assets/solardesk.png';
+import edgezonePreview from '../../assets/edgezone.png';
 
 // Helper for icons (using Devicon)
 const iconMap = {
@@ -22,6 +23,10 @@ const iconMap = {
   'Python': 'python/python-original',
   'TensorFlow': 'tensorflow/tensorflow-original',
   'Shadcn/UI': 'react/react-original', // Fallback
+  'Vanilla CSS': 'vanilla-css/vanilla-css-original',
+  'Render': 'render/render-original',
+  'Upstash': 'upstash/upstash-original',
+  'Vercel': 'vercel/vercel-original',
 };
 
 const getIconUrl = (skill) => {
@@ -135,6 +140,15 @@ const Projects = () => {
       image: portfolioPreview,
       color: '#161b22',
       tech: ['React', 'Tailwind Css', 'Vite']
+    },
+    {
+      id: 5,
+      name: 'Edge-zone Website',
+      desc: 'EdgeZone is a fast real-time Solana memecoin scanner that shows price market cap liquidity volume age and holder data then gives a clear four-color risk rating: green for safe blue for low yellow for caution and red for avoid. It tracks KOL wallets and side wallet clusters to help traders spot rugs and manipulation before they get rekt.',
+      link: 'https://edge-zone-xi1o.vercel.app/',
+      image: edgezonePreview,
+      color: '#161b22',
+      tech: ['React', 'Vanilla css', 'Vite', 'Vercel', 'Upstash', 'Render', 'Solana', 'Web3.js']
     }
   ];
 

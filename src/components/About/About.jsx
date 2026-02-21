@@ -4,24 +4,24 @@ const About = () => (
   <section className="about-section">
     <div className="about-header">
       <h1 className="about-name">OLSKIDO</h1>
-      <p className="about-title">Full-Stack Web & Solana Developer</p>
+      <p className="about-title">Full-Stack Web & Solana Developer • Content Creator • Social Media Manager</p>
     </div>
 
     <div className="about-container">
       <p className="about-statement">
-        I am a full-stack developer who works with Rust, TypeScript, and Solana. I enjoy building systems that run fast, handle real workloads, and connect to clean and responsive interfaces. I like working where backend logic, user experience, and blockchain technology meet, and I care about writing code that is reliable, understandable, and ready for real use.
+        I am a full-stack developer specializing in Rust TypeScript and Solana. I build fast reliable systems with clean responsive interfaces and enjoy working where backend logic user experience and blockchain technology intersect.
       </p>
       <br />
       <p className="about-statement">
-        I joined the crypto and Web3 space in 2023 and have stayed involved ever since. Over time, I have worked with different projects as a moderator, helper, and community contributor. I have seen how new ideas start, how communities form, and how projects try to grow through market cycles. I have also taken part in research, trading, and ecosystem discussions, which helped me understand how tokens, incentives, and user behavior shape the success of a project. These experiences taught me that crypto is not only about technology, but also about belief, coordination, and timing.
+        I entered the crypto and Web3 space in 2023 and have remained deeply involved ever since. I have contributed as a moderator community helper and active participant in research trading and ecosystem discussions. These experiences showed me how projects grow through market cycles how communities form and how belief coordination and timing drive success.
       </p>
       <br />
       <p className="about-statement">
-        My involvement in the space gave me a view of both the technical side and the social side. I have watched hype cycles rise and fade, seen builders continue during slow markets, and learned how real adoption usually takes patience and strong community support. This makes me think more carefully about what I build and why it matters.
+        Recently I have expanded into content creation. I just started writing content making memes and producing AI videos while also working as a social media manager. This creative side lets me combine technical knowledge with storytelling to engage communities and share insights in a more relatable way.
       </p>
       <br />
       <p className="about-statement">
-        I enjoy solving problems, learning quickly, and improving my craft. I like breaking complicated systems into smaller parts and making them work in a clear and efficient way. My long-term goal is to contribute to tools, products, and infrastructure that make decentralized technology more useful and open to more people, while also growing as a builder in a community that values experimentation and innovation.
+        I love solving problems learning fast and constantly improving my craft. My long-term goal is to build tools products and infrastructure that make decentralized technology more accessible useful and open while growing as both a builder and creator in a space that values experimentation innovation and community.
       </p>
     </div>
   </section>
