@@ -5,6 +5,10 @@ import coinviewPreview from '../../assets/coinviewpreview.png';
 import portfolioPreview from '../../assets/portfolio.png';
 import solardeskPreview from '../../assets/solardesk.png';
 import edgezonePreview from '../../assets/edgezone.png';
+import shadowcourtPreview from '../../assets/ShadowCourt.png';
+import awifPreview from '../../assets/awif.png';
+import contentPreview from '../../assets/content port.png';
+import warbrosPreview from '../../assets/warbros.png';
 
 // Helper for icons (using Devicon)
 const iconMap = {
@@ -27,6 +31,7 @@ const iconMap = {
   'Render': 'render/render-original',
   'Upstash': 'upstash/upstash-original',
   'Vercel': 'vercel/vercel-original',
+  'supabase': 'supabase/supabase-original',
 };
 
 const getIconUrl = (skill) => {
@@ -149,7 +154,46 @@ const Projects = () => {
       image: edgezonePreview,
       color: '#161b22',
       tech: ['React', 'Vanilla css', 'Vite', 'Vercel', 'Upstash', 'Render', 'Solana', 'Web3.js']
+    },
+    {
+      id: 6,
+      name: 'Shadowcourt Hub',
+      desc: 'Shadow Court Hub: AI tribunal with token scanner, court modes, verdict certificates, leaderboard, and analytics.',
+      link: 'https://shadowcourt.vercel.app/',
+      image: shadowcourtPreview,
+      color: '#161b22',
+      tech: ['React', 'Vanilla css', 'Vite', 'Vercel', 'supabase',]
+    },
+    {
+      id: 7,
+      name: 'Awif Solana',
+      desc: 'Awif Solana is a solana memecoin website.',
+      link: 'https://awif-solana.vercel.app/',
+      image: awifPreview,
+      color: '#161b22',
+      tech: ['React', 'Vanilla css', 'Vite', 'Vercel',]
+    },
+
+    {
+      id: 8,
+      name: 'Content Portfolio',
+      desc: 'My personal portfolio website to keep track of all the arts,memes, contents etc I create.',
+      link: 'https://awif-solana.vercel.app/',
+      image: contentPreview,
+      color: '#161b22',
+      tech: ['React', 'Vanilla css', 'Vite', 'Vercel',]
+    },
+
+    {
+      id: 9,
+      name: 'Warbros',
+      desc: 'A memecoin website for warbros',
+      link: 'https://warbros.xyz',
+      image: warbrosPreview,
+      color: '#161b22',
+      tech: ['React', 'TypeScript', 'Vite']
     }
+
   ];
 
   // Triplicate projects for seamless loop + enough width to drag
